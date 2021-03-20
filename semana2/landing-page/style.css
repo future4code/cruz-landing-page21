@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.main-container {
+  grid-template-rows: 6vh 2000px 42vh;
+  height: 100%;
+  min-height: 100vh;
+  display: grid;
+}
+
+header {
+  width: 100%;
+  position: sticky; 
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #592e17;
+  height: 70px;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  display: grid;
+  grid-column: 1/-1;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.spm {
+  width: 100%;
+  grid-column: 1/3;
+  padding: 10px;
+}
+
+#quem-somos {
+  padding: 20px;
+  grid-column: 3/-1;
+}
+
+.mercado {
+  width: 100%;
+  height: 80%;
+  grid-column: 2/3;
+}
+
+.comidas {
+  grid: 3/-1;
+  width: 100%;
+  height: 80%;
+}
+
+.pratos {
+  width: 50%;
+  height: 100%;
+}
+
+#produtos {
+  grid-row: 3;
+  grid-column: 1/2;
+  padding: 40px;
+}
+
+
+#cardapio {
+  height: 100%;
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.titulo {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  grid-column: 2/3;
+}
+
+.card {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-row: 2/3;
+  padding: 25px;
+  box-shadow: 2px 2px 5px darkgray;
+}
+
+.card-2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-row: 3/4;
+  padding: 25px;
+  box-shadow: 2px 2px 5px darkgray;
+}
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 3;
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+    color: white;
+  }
+
+  #trabalhe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px ;
+    height: 100%;
+    width: 100%;
+  }
+
+  #onde {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px ;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  #contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .redes {
+    width: 60px;
+    height: 60px;
+    
+  }
+
+  @media screen and (min-device-width:320px) and (max-device-width:420px) {
+      .main-container {
+        grid-template-rows: 70px 1fr 350px;
+      }
+
+      main {
+          display: flex;
+          flex-direction: column;
+      }
+
+      #cardapio {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #onde {
+        display: none;
+      }
+  }
